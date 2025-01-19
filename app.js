@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("JavaScript loaded");
+
+    const nav = document.querySelector("#nav");
+    const navToggle = document.querySelector(".nav-toggle");
+    const closeNav = document.querySelector(".close-nav");
+
+    if (!nav || !navToggle) {
+        console.error("nav or nav-toggle element not found");
+        return;
+    }
+
+    // Open/close navigation
+    navToggle.addEventListener("click", () => {
+        console.log("Hamburger menu clicked");
+        nav.classList.toggle("expanded");
+        navToggle.classList.toggle("expanded");
+    });
+
+    // Close navigation on clicking the close button
+    closeNav.addEventListener("click", () => {
+        nav.classList.remove("expanded");
+        navToggle.classList.remove("expanded");
+    });
+});
+
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
