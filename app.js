@@ -6,7 +6,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const message = document.getElementById('message').value.trim();
     const errorMessage = document.getElementById('error-message');
     // Validate form fields
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !/\S+@\S+\.\S+/.test(email)) {
         errorMessage.style.display = 'block';
     } else {
         errorMessage.style.display = 'none';
