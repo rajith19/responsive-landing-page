@@ -2,11 +2,10 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  background-color: #f5f5f5; /* Light Gray */
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #fdfdfd; /* Light neutral */
   color: #333; /* Dark Gray */
   line-height: 1.6;
 }
@@ -42,7 +41,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f3e5f5; /* Light Purple hover */
+  color: #e1bee7; /* Soft Purple hover */
 }
 
 /* Hero Section Styling */
@@ -54,12 +53,13 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-color: #f3e5f5; /* Light Purple */
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7); /* Soft gradient */
   color: #333; /* Dark Gray */
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
   color: #6a1b9a; /* Purple */
   margin-bottom: 10px;
 }
@@ -70,20 +70,19 @@ nav ul li a:hover {
 }
 
 .hero button {
-  background-color: #6a1b9a; /* Purple */
-  color: #f3e5f5; /* Light Purple text */
+  background: linear-gradient(90deg, #6a1b9a, #ab47bc); /* Gradient button */
+  color: #fff; /* White text */
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.5s ease, background 0.9s ease;
 }
 
 .hero button:hover {
-  background-color: #4a148c; /* Dark Purple */
-  color: #ede7f6; /* Soft Gray Purple text */
-  transform: scale(1.05);
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Reverse gradient */
 }
 
 /* Section Title Styling */
@@ -98,7 +97,7 @@ nav ul li a:hover {
 #features {
   height: 100vh;
   padding: 50px 20px;
-  background-color: #e8eaf6; /* Light Indigo */
+  background-color: #fafafa; /* Soft Light Gray */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +118,12 @@ nav ul li a:hover {
   width: 400px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Emphasize image */
+  transition: transform 0.3s ease;
+}
+
+.features-image img:hover {
+  transform: scale(1.05);
 }
 
 .features-description {
@@ -128,7 +132,7 @@ nav ul li a:hover {
 }
 
 .features-description h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #6a1b9a; /* Purple */
   margin-bottom: 10px;
 }
@@ -142,7 +146,7 @@ nav ul li a:hover {
 #contact {
   height: 100vh;
   padding: 50px 20px;
-  background-color: #ede7f6; /* Soft Gray Purple */
+  background: linear-gradient(135deg, #ede7f6, #e1bee7); /* Subtle gradient */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -194,14 +198,14 @@ form button {
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: background 0.7s ease, transform 0.9s ease;
   padding: 12px;
 }
 
 form button:hover {
-  background-color: #4a148c; /* Dark Purple */
-  color: #f5f5f5; /* Light Gray text */
-  transform: scale(1.05);
+  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Gradient hover */
+  transform: scale(1.02);
+  transition: transform 0.9s ease;
 }
 
 /* Responsive Design */
