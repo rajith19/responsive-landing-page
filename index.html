@@ -49,7 +49,35 @@
         </div>
       </section>
 
-      <section id="contact"></section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <!-- Name Field -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          <!-- Email Field -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <!-- Message Field -->
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            placeholder="Write your message here"
+            required
+          ></textarea>
+          <!-- Submit Button -->
+          <button type="submit">Submit</button>
+          <!-- Error Message -->
+          <p id="error-message" style="display: none; color: red">
+            Please fill all fields correctly.
+          </p>
+        </form>
+      </section>
     </main>
     <!-- Link to external JavaScript file -->
     <script src="app.js"></script>
