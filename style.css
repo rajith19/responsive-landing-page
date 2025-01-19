@@ -53,7 +53,7 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background: linear-gradient(135deg, #f3e5f5, #e1bee7); /* Soft gradient */
+  background: linear-gradient(135deg, #ffffff, #e1bee7); /* Soft gradient */
   color: #333; /* Dark Gray */
 }
 
@@ -146,7 +146,7 @@ nav ul li a:hover {
 #contact {
   height: 100vh;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #ede7f6, #e1bee7); /* Subtle gradient */
+  background: linear-gradient(90deg, #e1bee7, #faf9fb); /* Subtle gradient */
   text-align: center;
   display: flex;
   flex-direction: column;
