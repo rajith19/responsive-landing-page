@@ -1,18 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("JavaScript loaded");
 
     const nav = document.querySelector("#nav");
     const navToggle = document.querySelector(".nav-toggle");
     const closeNav = document.querySelector(".close-nav");
 
-    if (!nav || !navToggle) {
-        console.error("nav or nav-toggle element not found");
-        return;
-    }
-
     // Open/close navigation
     navToggle.addEventListener("click", () => {
-        console.log("Hamburger menu clicked");
         nav.classList.toggle("expanded");
         navToggle.classList.toggle("expanded");
     });
@@ -26,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
-
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
