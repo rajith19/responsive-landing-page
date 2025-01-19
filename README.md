@@ -21,7 +21,7 @@ How to Run Locally
    ```
 2. Navigate to the project folder:
    ```bash
-       cd responsive-landing-page
+    cd responsive-landing-page
    ```
 
 Open index.html in your browser to view the project locally.
@@ -29,16 +29,15 @@ Open index.html in your browser to view the project locally.
 ## Project Structure
 
 responsive-landing-page/
-│
-├── index.html # Main HTML file
-├── style.css # Styling for the webpage
-├── app.js # JavaScript for interactivity
-├── image/ # Folder for images
-│ └── placeholder.jpg
-└── README.md # Project documentation
+
+├── index.html  
+├── style.css  
+├── app.js  
+├── image/  
+└── README.md
 
 ## Technologies Used
 
-HTML5
-CSS3
-JavaScript
+- HTML5
+- CSS3
+- JavaScript
