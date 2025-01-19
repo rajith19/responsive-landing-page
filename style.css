@@ -1,15 +1,19 @@
 /* General Styling */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f5f5f5; /* Light Gray */
+  color: #333; /* Dark Gray */
   line-height: 1.6;
 }
 
 /* Header Styling */
 header {
-  background-color: #007bff;
+  background-color: #6a1b9a; /* Purple */
   padding: 15px 0;
   position: sticky;
   top: 0;
@@ -17,7 +21,6 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Bar styling*/
 nav ul {
   display: flex;
   justify-content: center;
@@ -31,7 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #fff; /* White text */
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -39,24 +42,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffd700; /* Gold hover effect */
+  color: #f3e5f5; /* Light Purple hover */
 }
 
 /* Hero Section Styling */
 .hero {
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-color: #e3f2fd;
-  color: #333;
+  background-color: #f3e5f5; /* Light Purple */
+  color: #333; /* Dark Gray */
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  color: #6a1b9a; /* Purple */
   margin-bottom: 10px;
 }
 
@@ -66,25 +70,35 @@ nav ul li a:hover {
 }
 
 .hero button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #6a1b9a; /* Purple */
+  color: #f3e5f5; /* Light Purple text */
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .hero button:hover {
-  background-color: #0056b3;
+  background-color: #4a148c; /* Dark Purple */
+  color: #ede7f6; /* Soft Gray Purple text */
+  transform: scale(1.05);
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 2.5rem;
+  color: #6a1b9a; /* Purple */
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Features Section Styling */
 #features {
-  height: 100vh; /* Full screen height */
-  padding: 20px;
-  background-color: #fff;
+  height: 100vh;
+  padding: 50px 20px;
+  background-color: #e8eaf6; /* Light Indigo */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,16 +109,17 @@ nav ul li a:hover {
 .features-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
 
 .features-image img {
   max-width: 100%;
+  width: 400px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .features-description {
@@ -113,20 +128,21 @@ nav ul li a:hover {
 }
 
 .features-description h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #6a1b9a; /* Purple */
   margin-bottom: 10px;
 }
 
 .features-description p {
   font-size: 1rem;
-  color: #555;
+  color: #555; /* Medium Gray */
 }
 
 /* Contact Section Styling */
 #contact {
-  height: 100vh; /* Full screen height */
-  padding: 20px;
-  background-color: #e3f2fd;
+  height: 100vh;
+  padding: 50px 20px;
+  background-color: #ede7f6; /* Soft Gray Purple */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -136,6 +152,7 @@ nav ul li a:hover {
 
 #contact h2 {
   font-size: 2rem;
+  color: #6a1b9a; /* Purple */
   margin-bottom: 20px;
 }
 
@@ -144,41 +161,47 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  max-width: 600px;
 }
 
 form input,
 form textarea,
 form button {
   width: 100%;
-  max-width: 500px;
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd; /* Light Gray border */
   border-radius: 5px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #007bff;
+  border-color: #6a1b9a; /* Purple border */
   outline: none;
+  box-shadow: 0 0 8px rgba(106, 27, 154, 0.3); /* Purple shadow */
 }
 
 form textarea {
   resize: vertical;
-  height: 120px;
+  height: 150px;
 }
 
 form button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #6a1b9a; /* Purple */
+  color: #fff; /* White text */
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  padding: 12px;
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #4a148c; /* Dark Purple */
+  color: #f5f5f5; /* Light Gray text */
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
