@@ -1,11 +1,11 @@
-Responsive Landing Page
+# Responsive Landing Page
 
 A fully responsive landing page featuring:
 
 - **Smooth Scrolling**: Seamless navigation between sections.
 - **Responsive Design**: Optimized for all devices.
 
-Features
+## Features
 
 - **Dynamic Sections**: Home, Features, and Contact Us.
 - **Form Validation**: Validates and alerts users on successful form submission.
@@ -18,25 +18,27 @@ How to Run Locally
 1. Clone the repository:
    ```bash
    git clone https://github.com/rajith19/responsive-landing-page.git
-   Navigate to the project folder:
-   bash
-   Copy
-   Edit
-   cd responsive-landing-page
-   Open index.html in your browser to view the project locally.
-   Project Structure
-   Copy
-   Edit
-   responsive-landing-page/
-   │
-   ├── index.html   # Main HTML file
-   ├── style.css    # Styling for the webpage
-   ├── app.js       # JavaScript for interactivity
-   ├── image/       # Folder for images
-   │   └── placeholder.jpg
-   └── README.md    # Project documentation
-   Technologies Used
-   HTML5
-   CSS3
-   JavaScript
    ```
+2. Navigate to the project folder:
+   ```bash
+       cd responsive-landing-page
+   ```
+
+Open index.html in your browser to view the project locally.
+
+## Project Structure
+
+responsive-landing-page/
+│
+├── index.html # Main HTML file
+├── style.css # Styling for the webpage
+├── app.js # JavaScript for interactivity
+├── image/ # Folder for images
+│ └── placeholder.jpg
+└── README.md # Project documentation
+
+## Technologies Used
+
+HTML5
+CSS3
+JavaScript
