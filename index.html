@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Landing Page</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Header Section -->
     <header>
-      <nav>
+      <div class="logo">
+        <img src="/image/logo-placeholder.png" alt="Logo" />
+      </div>
+      <div class="nav-toggle">
+        <div class="nav-toggle-bar"></div>
+        <div class="nav-toggle-bar"></div>
+        <div class="nav-toggle-bar"></div>
+      </div>
+      <nav id="nav" class="nav mobile-hidden">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Features</a></li>
