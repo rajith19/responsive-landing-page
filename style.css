@@ -69,22 +69,6 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.hero button {
-  background: linear-gradient(90deg, #6a1b9a, #ab47bc); /* Gradient button */
-  color: #fff; /* White text */
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.5s ease, background 0.9s ease;
-}
-
-.hero button:hover {
-  transform: scale(1.1);
-  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Reverse gradient */
-}
-
 /* Section Title Styling */
 .section-title {
   font-size: 2.5rem;
@@ -170,8 +154,7 @@ form {
 }
 
 form input,
-form textarea,
-form button {
+form textarea {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
@@ -192,20 +175,58 @@ form textarea {
   height: 150px;
 }
 
-form button {
-  background-color: #6a1b9a; /* Purple */
+/* Button Styling */
+button {
+  background: linear-gradient(90deg, #6a1b9a, #ab47bc); /* Gradient button */
   color: #fff; /* White text */
   border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: background 0.7s ease, transform 0.9s ease;
-  padding: 12px;
+  transition: transform 0.5s ease, background 0.9s ease;
+  width: 10em;
 }
 
-form button:hover {
-  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Gradient hover */
-  transform: scale(1.02);
-  transition: transform 0.9s ease;
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Reverse gradient */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #6a1b9a; /* Purple */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
 }
 
 /* Responsive Design */
