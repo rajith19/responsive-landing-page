@@ -11,5 +11,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     } else {
         errorMessage.style.display = 'none';
         alert('Form submitted successfully!');
+        // Clear the form fields
+        document.getElementById('contact-form').reset();
     }
 });
