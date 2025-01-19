@@ -26,18 +26,19 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #ffd700; /* Gold hover effect */
 }
 
 /* Hero Section Styling */
