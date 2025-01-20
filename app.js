@@ -33,3 +33,27 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
         document.getElementById('contact-form').reset();
     }
 });
+
+
+const themeIcon = document.getElementById('theme-icon');
+
+themeIcon.addEventListener('click', () => {
+    document.body.classList.toggle('teal-theme');
+    document.body.classList.toggle('light-theme');
+});
+
+// Toggle Theme on Icon Click
+themeIcon.addEventListener('click', () => {
+    const currentTheme = themeIcon.classList.contains('light') ? 'light' : 'teal';
+    const newTheme = currentTheme === 'light' ? 'teal' : 'light';
+
+    // Update body class and icon
+    document.body.classList.remove('light', 'teal');
+    document.body.classList.add(newTheme);
+
+    // Update the icon
+    themeIcon.className = `theme-icon ${newTheme}`;
+
+    // Save the theme
+    localStorage.setItem('selected-theme', newTheme);
+});

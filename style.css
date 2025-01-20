@@ -1,3 +1,40 @@
+/* Color Variables */
+:root {
+  --primary-color: #6a1b9a; /* Old Purple */
+  --primary-color-light: #e1bee7; /* Light Purple */
+  --text-color-light: #ffffff; /* White */
+  --text-color-dark: #333333; /* Dark Gray */
+  --purple-teal-color: #008080;
+  --background-gradient: linear-gradient(
+    135deg,
+    #ffffff,
+    #e1bee7
+  ); /* Light Gradient */
+  --background-alt-gradient: linear-gradient(
+    90deg,
+    #e1bee7,
+    #faf9fb
+  ); /* Subtle Gradient */
+}
+
+body.teal-theme {
+  --primary-color: #008080; /* Teal */
+  --primary-color-light: #a7d4d4; /* Light Teal */
+  --text-color-light: #ffffff; /* White */
+  --text-color-dark: #333333; /* Dark Gray */
+  --purple-teal-color: #6a1b9a;
+  --background-gradient: linear-gradient(
+    135deg,
+    #ffffff,
+    #a7d4d4
+  ); /* Teal Gradient */
+  --background-alt-gradient: linear-gradient(
+    90deg,
+    #a7d4d4,
+    #f0fafa
+  ); /* Light Teal Gradient */
+}
+
 /* General Styling */
 html {
   scroll-behavior: smooth;
@@ -12,11 +49,53 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6a1b9a;
+  background-color: var(--primary-color);
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* General Styling */
+.theme-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#theme-icon i {
+  font-style: normal; /* Ensure no italic style is applied */
+  font-size: 24px;
+}
+
+/* Icon Colors */
+.theme-icon.light {
+  background-color: #6a1b9a; /* Default Purple */
+  color: #ffffff;
+}
+
+.theme-icon.teal {
+  background-color: #069c54; /* Teal */
+  color: #ffffff;
+}
+
+/* Icon Inner Design */
+.theme-icon-inner {
+  font-size: 24px;
+  content: "\2600"; /* Sun for light theme (default) */
+  transition: transform 0.3s ease;
+}
+
+.theme-icon.light .theme-icon-inner::before {
+  content: "\2600"; /* Unicode for sun symbol */
+}
+
+.theme-icon.teal .theme-icon-inner::before {
+  content: "\263E"; /* Unicode for moon symbol */
 }
 
 /* Logo Styling */
@@ -32,7 +111,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  background: #6a1b9a;
+  background: var(--primary-color);
   height: 100vh;
   width: 250px;
   padding: 50px 20px;
@@ -57,19 +136,19 @@ header {
 }
 
 .nav ul li a {
-  color: white;
+  color: var(--text-color-light);
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 .nav ul li a:hover {
-  color: #e1bee7;
+  color: var(--primary-color-light);
 }
 
 .nav .close-nav {
   margin-top: auto;
   font-size: 2rem;
-  color: white;
+  color: var(--text-color-light);
   cursor: pointer;
   text-align: right;
 }
@@ -87,7 +166,7 @@ header {
 
 .nav-toggle-bar {
   height: 4px;
-  background: white;
+  background: var(--text-color-light);
   border-radius: 2px;
   transition: transform 0.3s ease;
 }
@@ -105,6 +184,7 @@ header {
   transform: rotate(-45deg) translate(7px, -7px);
   transition: transform 0.3s ease;
 }
+
 /* Hero Section Styling */
 .hero {
   height: 100vh;
@@ -114,14 +194,14 @@ header {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background: linear-gradient(135deg, #ffffff, #e1bee7); /* Soft gradient */
-  color: #333; /* Dark Gray */
+  background: var(--background-gradient);
+  color: var(--text-color-dark);
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #6a1b9a; /* Purple */
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
@@ -133,7 +213,7 @@ header {
 /* Section Title Styling */
 .section-title {
   font-size: 2.5rem;
-  color: #6a1b9a; /* Purple */
+  color: var(--primary-color);
   margin-bottom: 30px;
   text-align: center;
 }
@@ -142,7 +222,7 @@ header {
 #features {
   height: 100vh;
   padding: 50px 20px;
-  background-color: #fafafa; /* Soft Light Gray */
+  background-color: var(--background-alt-gradient);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,7 +243,7 @@ header {
   width: 400px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Emphasize image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -178,20 +258,20 @@ header {
 
 .features-description h2 {
   font-size: 1.8rem;
-  color: #6a1b9a; /* Purple */
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
 .features-description p {
   font-size: 1rem;
-  color: #555; /* Medium Gray */
+  color: #555;
 }
 
 /* Contact Section Styling */
 #contact {
   height: 100vh;
   padding: 50px 20px;
-  background: linear-gradient(90deg, #e1bee7, #faf9fb); /* Subtle gradient */
+  background: var(--background-alt-gradient);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -201,7 +281,7 @@ header {
 
 #contact h2 {
   font-size: 2rem;
-  color: #6a1b9a; /* Purple */
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -219,16 +299,16 @@ form textarea {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ddd; /* Light Gray border */
+  border: 1px solid #ddd;
   border-radius: 5px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #6a1b9a; /* Purple border */
+  border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 8px rgba(106, 27, 154, 0.3); /* Purple shadow */
+  box-shadow: 0 0 8px rgba(106, 27, 154, 0.3);
 }
 
 form textarea {
@@ -238,8 +318,12 @@ form textarea {
 
 /* Button Styling */
 button {
-  background: linear-gradient(90deg, #6a1b9a, #ab47bc); /* Gradient button */
-  color: #fff; /* White text */
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-color-light)
+  );
+  color: var(--text-color-light);
   border: none;
   padding: 12px 25px;
   font-size: 1rem;
@@ -251,13 +335,17 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  background: linear-gradient(90deg, #ab47bc, #6a1b9a); /* Reverse gradient */
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-light),
+    var(--primary-color)
+  );
 }
 
 /* Footer Styling */
 footer {
-  background-color: #6a1b9a; /* Purple */
-  color: #fff; /* White text */
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
   text-align: center;
   padding: 20px 0;
 }
@@ -327,6 +415,7 @@ footer {
   .nav ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .nav ul li {
